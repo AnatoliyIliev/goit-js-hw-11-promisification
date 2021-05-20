@@ -1,8 +1,8 @@
 ## Задание 1
 
-Напиши функцию `delay(ms)`, которая возвращает промис, переходящий в состояние
-`"resolved"` через `ms` миллисекунд. Значением исполнившегося промиса должно
-быть то кол-во миллисекунд которое передали во время вызова функции `delay`.
+Напиши функцию `delay(ms)`, которая возвращает промис, переходящий в состояние `"resolved"` через
+`ms` миллисекунд. Значением исполнившегося промиса должно быть то кол-во миллисекунд которое
+передали во время вызова функции `delay`.
 
 ```js
 const delay = ms => {
@@ -19,9 +19,8 @@ delay(1500).then(logger); // Resolved after 1500ms
 
 ## Задание 2
 
-Перепиши функцию `toggleUserState()` так, чтобы она не использовала
-callback-функцию `callback`, а принимала всего два параметра `allUsers` и
-`userName` и возвращала промис.
+Перепиши функцию `toggleUserState()` так, чтобы она не использовала callback-функцию `callback`, а
+принимала всего два параметра `allUsers` и `userName` и возвращала промис.
 
 ```js
 const users = [
@@ -56,9 +55,8 @@ toggleUserState(users, 'Lux').then(logger);
 
 ## Задание 3
 
-Перепиши функцию `makeTransaction()` так, чтобы она не использовала
-callback-функции `onSuccess` и `onError`, а принимала всего один параметр
-`transaction` и возвращала промис.
+Перепиши функцию `makeTransaction()` так, чтобы она не использовала callback-функции `onSuccess` и
+`onError`, а принимала всего один параметр `transaction` и возвращала промис.
 
 ```js
 const randomIntegerFromInterval = (min, max) => {
@@ -97,19 +95,11 @@ makeTransaction({ id: 73, amount: 100 }, logSuccess, logError);
 /*
  * Должно работать так
  */
-makeTransaction({ id: 70, amount: 150 })
-  .then(logSuccess)
-  .catch(logError);
+makeTransaction({ id: 70, amount: 150 }).then(logSuccess).catch(logError);
 
-makeTransaction({ id: 71, amount: 230 })
-  .then(logSuccess)
-  .catch(logError);
+makeTransaction({ id: 71, amount: 230 }).then(logSuccess).catch(logError);
 
-makeTransaction({ id: 72, amount: 75 })
-  .then(logSuccess)
-  .catch(logError);
+makeTransaction({ id: 72, amount: 75 }).then(logSuccess).catch(logError);
 
-makeTransaction({ id: 73, amount: 100 })
-  .then(logSuccess)
-  .catch(logError);
+makeTransaction({ id: 73, amount: 100 }).then(logSuccess).catch(logError);
 ```
